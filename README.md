@@ -10,13 +10,17 @@ Aplikasi PHP Native sederhana untuk:
 
 ```text
 TesProjectNative/
+├── ajax/
+│   ├── get_kabupaten.php
+│   └── get_kecamatan.php
+│   └── get_kelurahan.php
 ├── assets/
 │   ├── css/style.css
 │   └── uploads/pegawai/
 ├── config/
 │   └── koneksi.php
 ├── database/
-│   └── db_tesproject_native.sql
+│   └── db_hrd_test.sql
 ├── helpers/
 │   └── auth.php
 ├── layouts/
