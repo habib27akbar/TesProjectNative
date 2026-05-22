@@ -69,12 +69,9 @@ $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
 <?php if ($error): ?><div class="alert alert-danger"><?= e($error); ?></div><?php endif; ?>
 
 <div class="card shadow-sm border-0">
-    <div class="card-header bg-white fw-bold d-flex justify-content-between align-items-center">
-        <span>Daftar User</span>
-        <span class="badge bg-primary"><?= count($users); ?> User</span>
-    </div>
+
     <div class="card-body table-responsive">
-        <table class="table table-hover align-middle">
+        <table id="tableUser" class="table table-hover align-middle">
             <thead class="table-light">
                 <tr>
                     <th>No</th>
@@ -179,3 +176,33 @@ $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
         </div>
     </div>
 <?php endforeach; ?>
+
+<link rel="stylesheet"
+    href="https://cdn.datatables.net/1.13.8/css/dataTables.bootstrap5.min.css">
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+
+<script src="https://cdn.datatables.net/1.13.8/js/dataTables.bootstrap5.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#tableUser').DataTable({
+            responsive: true,
+            autoWidth: false,
+            pageLength: 10,
+            language: {
+                search: "Cari:",
+                lengthMenu: "Tampilkan _MENU_ data",
+                info: "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
+                paginate: {
+                    previous: "Sebelumnya",
+                    next: "Berikutnya"
+                },
+                zeroRecords: "Data tidak ditemukan",
+                infoEmpty: "Data kosong"
+            }
+        });
+    });
+</script>

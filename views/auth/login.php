@@ -34,7 +34,7 @@ require_once __DIR__ . '/../../layouts/header.php';
                     <i class="bi bi-shield-lock fs-2"></i>
                 </div>
                 <h3 class="fw-bold">Login Admin</h3>
-                <p class="text-muted">Masuk untuk mengelola data user dan pegawai</p>
+
             </div>
             <?php if ($error): ?>
                 <div class="alert alert-danger"><?= e($error); ?></div>
@@ -42,15 +42,15 @@ require_once __DIR__ . '/../../layouts/header.php';
             <form method="post">
                 <div class="mb-3">
                     <label class="form-label">Username</label>
-                    <input type="text" name="username" class="form-control form-control-lg" placeholder="Admin" required autofocus>
+                    <input type="text" name="username" class="form-control form-control-lg" required autofocus>
                 </div>
                 <div class="mb-4">
                     <label class="form-label">Password</label>
-                    <input type="password" name="password" class="form-control form-control-lg" placeholder="Admin" required>
+                    <input type="password" name="password" class="form-control form-control-lg" required>
                 </div>
                 <button class="btn btn-primary btn-lg w-100" type="submit">Login</button>
             </form>
-            <p class="text-center text-muted small mt-4 mb-0">Username: Admin | Password: Admin</p>
+
         </div>
     </div>
 </div>
