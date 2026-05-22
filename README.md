@@ -40,11 +40,11 @@ TesProjectNative/
 
 1. Copy folder `TesProjectNative` ke `htdocs` jika menggunakan XAMPP.
 2. Buat database MySQL dengan import file:
-   `database/db_tesproject_native.sql`
+   `database/db_hrd_test.sql`
 3. Sesuaikan konfigurasi database di:
    `config/koneksi.php`
 4. Jalankan melalui browser:
-   `http://localhost/TesProjectNative/index.php`
+   `http://localhost/TesProjectNative/`
 
 ## Akun Login Default
 
